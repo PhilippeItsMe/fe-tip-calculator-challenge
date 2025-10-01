@@ -21,38 +21,37 @@
         <section>
 
             <!-- Bill -->
-            <div>
-                <p>Bill</p>
-                <label class="bg-grey50">
-                    <p>$</p>
-                    <input placeholder="0">
-                </label>
-
-            <!-- Tips-->
-            </div>
-                <p>Select Tip %</p>
-                <div>
-                    <button class="bg-green900">5%</button>
-                    <button class="bg-green900">10%</button>
-                    <button class="bg-green900">15%</button>
-                    <button class="bg-green900">25%</button>
-                    <button class="bg-green900">50%</button>
-                    <input class="bg-grey50" placeholder="Custom">
+            <div class="input-block">
+                <label class="label-bottom-margin" for="bill">Bill</label>
+                <div class="bg-grey50 input-box">
+                    <span class="dollar">$</span>
+                    <input id="bill" placeholder="0" type="number" step="0.25">
                 </div>
+            </div>
 
             <!-- Tips-->
-    
-
+            <div class="input-block">
+                <p class="label-bottom-margin">Select Tip %</p>
+                <div class="three-per-line">
+                    <button class="bg-green900 big">5%</button>
+                    <button class="bg-green900 big">10%</button>
+                    <button class="bg-green900 big">15%</button>
+                    <button class="bg-green900 big">25%</button>
+                    <button class="bg-green900 big">50%</button>
+                    <input class="bg-grey50 big text-custom" placeholder="Custom">
+                </div>
+            </div>
+            
             <!-- Number of people -->    
             <div>
-                <div>
+                <label class="label-bottom-margin inline-text" for="number">
                     <span>Number of People</span>
                     <span>Can't be zero</span>
-                </div>
-                <label class="bg-grey50">
-                    <img src="/assets/images/icon-person.svg" alt="men icon">
-                    <input placeholder="0">
                 </label>
+                <div class="bg-grey50 input-box">
+                    <img src="/assets/images/icon-person.svg" alt="person icon" class="input-icon">
+                    <input id="number" placeholder="0" type="number" min="1" step="1">
+                </div>
             </div>
         </section>
 

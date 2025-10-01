@@ -64,44 +64,42 @@ h1 {
     font-weight: 300;
 }
 
-
-p, span { 
-    color: var(--grey400);
-    font-size: 1rem;
-    font-weight: 500;
+p, span, label { 
+    color: var(--grey500);
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 
-/* ---------- Label Styling ----------*/
-
-label {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-label.bg-grey50 {
-    background-color: var(--grey50) !important;
-    border: 1px solid var(--grey200);
-}
-
-label input {
-    border: none;
-    outline: none;
-    background: transparent;
-    flex: 1;
-    margin-left: 0.5rem;
-}
-
-/* .very-big {
+.very-big {
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
 .big {
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 
 .small {
-} */
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.dollar {
+    font-size: 1.2rem;
+    color: var(--grey400);
+    font-weight: 300;
+}
+
+.text-input::placeholder {
+    font-size: 1.25rem;
+}
+
+.text-custom::placeholder {
+    color: var(--green900);
+    font-size: 1rem;
+    font-weight: 600;
+}
 
 /* ---------- Box Styling ----------*/
 
@@ -110,3 +108,59 @@ section {
     padding: 1rem;
     border-radius: 1rem;
 }
+
+/* ---------- Inputs Styling ----------*/
+
+/* Tips & Number */
+
+.input-block {
+    margin-bottom: 1rem;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    height: 50px;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    margin-left: 0.5rem;
+}
+
+.label-bottom-margin{
+    margin-bottom: 0.4rem;
+}
+.inline-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Tips */
+.three-per-line {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 0.5rem;
+}
+
+.three-per-line > button,
+.three-per-line > input {
+    width: 100%;
+    height: 40px;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* For the placeholder in Input */
+}
+
+
