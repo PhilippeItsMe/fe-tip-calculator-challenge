@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* ---------- Primary set-up ----------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+main {
+    width: 60%;
+    max-width: 1000px;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* ---------- Colors ----------*/
+
+:root {
+    /*Primary color*/
+    --green400: hsl(172, 67%, 45%);
+
+    /*Secondary colors*/
+    --green900: hsl(183, 100%, 15%);
+    --grey500: hsl(186, 14%, 43%);
+    --grey400: hsl(184, 14%, 56%);
+    --grey200: hsl(185, 41%, 84%);
+    --grey50: hsl(189, 47%, 97%);
+    --white: hsl(0, 100%, 100%);
+
+}
+
+ /*Backgrounds*/
+.bg-green900 {background-color: var(--green900) !important;}
+.bg-green200 {background-color: var(--grey200);}
+.bg-grey50 {background-color: var(--grey50);}
+.bg-white {background-color: var(--white);}
+
+
+/* ---------- Typos ----------*/
+
+* {
+    font-family: "Space Mono", monospace;
+    color: var(--white);
+}
+
+h1 {
+    color: var(--grey500);
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+
+p, span { 
+    color: var(--grey400);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ---------- Label Styling ----------*/
+
+label {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+label.bg-grey50 {
+    background-color: var(--grey50) !important;
+    border: 1px solid var(--grey200);
+}
+
+label input {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    margin-left: 0.5rem;
+}
+
+/* .very-big {
+}
+
+.big {
+}
+
+.small {
+} */
+
+/* ---------- Box Styling ----------*/
+
+section {
+    flex : 1;
+    padding: 1rem;
+    border-radius: 1rem;
+}
