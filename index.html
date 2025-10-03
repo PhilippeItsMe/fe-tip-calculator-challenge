@@ -13,12 +13,15 @@
     <script src="assets/js/script.js" defer></script>
 </head>
 
-<body class="bg-green200">
-    <h1>SLI<br>TTER</h1>
+<body class="bg-grey200">
+    <h1>
+        <span class="line">SLI</span>
+        <span class="line">TTER</span>
+    </h1>
     <main class="bg-white">
 
         <!-- Inputs -->
-        <section>
+        <div class="section-flex">
 
             <!-- Bill -->
             <div class="input-block">
@@ -53,25 +56,28 @@
                     <input id="number" placeholder="0" type="number" min="1" step="1">
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Outputs -->
-        <section class="bg-green900">
-            <div>
+        <div class="bg-green900 section-flex">
+            <!-- Tips Amount -->
+            <div class="output inline-text">
                 <div>
                     <p>Tips Amount</p>
                     <p>/ person</p>
                 </div>
-                <p>$0.00</p>
+                <p class="very-big">$0.00</p>
             </div>
-            <div>
+            <!-- Total -->
+            <div class="output inline-text">
                 <div>
                     <p>Total</p>
                     <p>/ person</p>
                 </div>
-                <p>$0.00</p>
+                <p class="very-big">$0.00</p>
             </div>
+             <!-- Button -->
             <button>RESET</button>
-        </section>
+        </div>
     </main>
 </body>

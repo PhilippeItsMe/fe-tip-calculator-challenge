@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-
 /* ---------- Primary set-up ----------*/
 
 * {
@@ -25,8 +24,8 @@ main {
     border-radius: 1rem;
     display: flex;
     flex-direction: row;
+    margin-bottom: 2rem;
 }
-
 
 /* ---------- Colors ----------*/
 
@@ -45,11 +44,10 @@ main {
 }
 
  /*Backgrounds*/
-.bg-green900 {background-color: var(--green900) !important;}
-.bg-green200 {background-color: var(--grey200);}
+.bg-green900 {background-color: var(--green900);}
+.bg-grey200 {background-color: var(--grey200);}
 .bg-grey50 {background-color: var(--grey50);}
 .bg-white {background-color: var(--white);}
-
 
 /* ---------- Typos ----------*/
 
@@ -59,30 +57,44 @@ main {
 }
 
 h1 {
-    color: var(--grey500);
-    font-size: 2.5rem;
-    font-weight: 300;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+    line-height: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les spans */
+    width: fit-content;
+}
+
+h1 span {
+    color: var(--green900);
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.3em;
+    line-height: 1.2;
+}
+
+h1 span:first-child {
+    letter-spacing: 0.7em;
+    padding-left: 16px;
 }
 
 p, span, label { 
     color: var(--grey500);
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
 .very-big {
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: 600;
+    color: var(--green400)
 }
 
 .big {
     font-size: 1.25rem;
     font-weight: 500;
-}
-
-.small {
-    font-size: 0.9rem;
-    font-weight: 400;
 }
 
 .dollar {
@@ -96,16 +108,25 @@ p, span, label {
 }
 
 .text-custom::placeholder {
+    color: var(--green900) !important;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Alternative plus spécifique */
+input.text-custom::placeholder {
     color: var(--green900);
     font-size: 1rem;
     font-weight: 600;
+    text-align: center;
 }
 
 /* ---------- Box Styling ----------*/
 
-section {
-    flex : 1;
-    padding: 1rem;
+.section-flex {
+    flex: 1;
+    padding: 1.5rem;
     border-radius: 1rem;
 }
 
@@ -124,6 +145,15 @@ section {
     border-radius: 0.25rem;
     cursor: pointer;
     height: 50px;
+    padding: 0 1rem;
+}
+
+.input-block:first-of-type div:hover {
+    border: 1px solid var(--green400);
+}
+
+.input-box:first-of-type:hover {
+    border: 1px solid orange;
 }
 
 input {
@@ -132,6 +162,13 @@ input {
     background: transparent;
     flex: 1;
     margin-left: 0.5rem;
+}
+
+input::placeholder {
+    text-align: end;
+    font-size: 1.2rem;
+    color: var(--grey400);
+    font-weight: 300;
 }
 
 .label-bottom-margin{
@@ -163,4 +200,52 @@ input {
     text-align: center; /* For the placeholder in Input */
 }
 
+.three-per-line > button:hover {
+    background-color: var(--green400);
+}
 
+.three-per-line > input:focus {
+    border: 1px solid var(--green400);
+}
+
+/* ---------- Outputs Styling ----------*/
+
+.output {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 0;
+}
+
+.output div:first-child p:first-child {
+    color: var(--white);
+}
+
+
+button:last-child {
+    background-color: var(--grey400);
+    color: var(--green900);
+    padding: 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.bg-green900 button:last-child:hover {
+    color: var(--green900);
+    background-color: var(--green400);
+}
+
+
+/* ---------- Responsivness ----------*/
+
+@media screen and (max-width: 1000px) {
+
+    main {
+    width: 80%;
+    flex-direction: column;
+    }
+}
