@@ -49,6 +49,11 @@ main {
 .bg-grey50 {background-color: var(--grey50);}
 .bg-white {background-color: var(--white);}
 
+ /*Colors*/
+ .orange {
+    color: orange;
+ }
+
 /* ---------- Typos ----------*/
 
 * {
@@ -108,14 +113,6 @@ p, span, label {
 }
 
 .text-custom::placeholder {
-    color: var(--green900) !important;
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
-}
-
-/* Alternative plus spécifique */
-input.text-custom::placeholder {
     color: var(--green900);
     font-size: 1rem;
     font-weight: 600;
