@@ -52,6 +52,7 @@ main {
  /*Colors*/
  .orange {
     color: orange;
+    display: None;
  }
 
 /* ---------- Typos ----------*/
@@ -150,7 +151,7 @@ p, span, label {
 }
 
 .input-box:first-of-type:hover {
-    border: 1px solid orange;
+    border: 1px solid var(--green400);
 }
 
 input {
@@ -161,7 +162,14 @@ input {
     margin-left: 0.5rem;
 }
 
-input::placeholder {
+/* Hide number input spinners
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+} */
+
+input::placeholder, input {
     text-align: end;
     font-size: 1.2rem;
     color: var(--grey400);
@@ -203,6 +211,10 @@ input::placeholder {
 
 .three-per-line > input:focus {
     border: 1px solid var(--green400);
+}
+
+.active {
+    background-color: var(--green400);
 }
 
 /* ---------- Outputs Styling ----------*/
